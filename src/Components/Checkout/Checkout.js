@@ -53,14 +53,6 @@ export default function Checkout() {
         },
     });
 
-  //   function handleSubmit() {
-  //   //  clear cart
-  //   cartItems.length = 0;
-
-  //   //  Show thank-you page
-  //   navigate("/ThankYouPage");
-  // }
-
   function cartTotal() {
       let ttl = 0;
       for (var i = 0; i < cartItems.length; i++) {

@@ -12,9 +12,14 @@ export default function Products() {
               <Product
                 key = {p.id}
                 id = {p.id}
+                category = {p.category}
                 name = {p.name}
                 image = {p.image}
                 price = {p.price}
+                unit = {p.unit}
+                rating = {p.rating}
+                shipping = {p.shipping}
+                description = {p.description}
                 product = {p}
               />
            ))

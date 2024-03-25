@@ -22,7 +22,7 @@ export default function CheckoutItems({id, prodId, name, price, quantity}) {
                      width={50} height={50} 
                      className='cart-image'/>
                     <h1 className='name'>{name}</h1>
-                    <h2 className='price'>{currency(price)}</h2>
+                    <h2 className='cart-price'>{currency(price)}</h2>
                     <h2 className='quantity'>{`Quantity: ${quantity}`}</h2>
                     <h2 className='item-total'>{currency(cost(price, quantity))}</h2>
             </div>

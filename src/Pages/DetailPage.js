@@ -1,3 +1,4 @@
+import '../Styles/details.css';
 import React, { useContext } from 'react'
 import {useLocation} from 'react-router-dom';
 import ProductContext from '../Context/ProductContext';
@@ -38,20 +39,41 @@ export default function DetailPage() {
     }
   }
 
+  const currency = (value) =>
+  new Intl.NumberFormat(
+      'en-US', 
+      {
+          style: 'currency',
+          currency: 'USD'
+      }
+  ).format(value);
+
+
 
   if (results.length > 0) {
     const p = results[0];
     return (
-      <div className="body">
-        <div className="detail">
-              <h1 className = "title">Product Detail</h1>
-              <img src={require(`../Images/${p.id}.jpg`)} 
-                    width={150} height={150} 
-                    className='picture-frame large'/>
-              <h1 className="name">{p.name}</h1>
-              <h2>{p.price}</h2>
-              <button className="addToCart" 
-                      onClick={() => addToCart() } >Add to Cart</button>
+      <div className = 'body'>
+        <div className = 'detail'>
+            <div className="text-area">
+                <h1 className = 'product-name'>{p.name}</h1>
+                <h2 className = 'rating'>
+                  <span className = 'rating-label'>Rating:</span>
+                  { p.rating > 0 ? <span className='stars'>&#9733;</span> : <span>&#9734;</span> }
+                  { p.rating > 1 ? <span className='stars'>&#9733;</span> : <span>&#9734;</span> }
+                  { p.rating > 2 ? <span className='stars'>&#9733;</span> : <span>&#9734;</span> }
+                  { p.rating > 3 ? <span className='stars'>&#9733;</span> : <span>&#9734;</span> }
+                  { p.rating > 4 ? <span className='stars'>&#9733;</span> : <span>&#9734;</span> }
+                </h2>
+                <h2 className = 'price'>{currency(p.price)} {p.unit}</h2>
+                <h3 className = 'descr'>{p.description}</h3>
+            </div>
+            <div className="picture-area">
+                <img className='picture'
+                     src={require(`../Images/${p.id}.jpg`)} />
+                <button className="add-now" 
+                        onClick={() => addToCart() } >Add to Cart</button>
+            </div>
         </div>
       </div>
     );

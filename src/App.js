@@ -1,4 +1,4 @@
-import './index.css';
+import './Styles/index.css';
 import React from 'react';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Pages/Header';
