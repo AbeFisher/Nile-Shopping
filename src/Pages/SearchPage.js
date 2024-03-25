@@ -30,7 +30,7 @@ export default function SearchPage() {
                   <h2 className = 'question'>What can we help you find today?</h2>
                   <SearchProducts term={term} setTerm={setTerm}/>
 
-                  <div>
+                  <div className='results-list'>
                     { results.map((p) => (
                         <Product
                             key = {p.id}

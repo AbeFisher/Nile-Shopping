@@ -60,8 +60,8 @@ export default function Product({id, name, image, price, product}) {
 
     return (
         <>
-            <div onClick={()=>HandleSelect(id)}>
-            <ProductCard>
+            <div className='card-container' onClick={()=>HandleSelect(id)}>
+            <ProductCard >
                 <img src={require(`../../Images/${id}.jpg`)} 
                      width={150} height={150} 
                      className='picture-frame'/>

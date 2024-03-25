@@ -2,7 +2,7 @@ const ProductData = [
     {
         "id": 1,
         "category": "Toys",
-        "name": "Bag-o-sand",
+        "name": "Bag-o-Sand",
         "image": "1.jpg",
         "price": 9.99,
         "unit": "per 25# bag",

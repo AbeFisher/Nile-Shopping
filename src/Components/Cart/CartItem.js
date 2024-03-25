@@ -29,9 +29,8 @@ export default function CartItem({id, prodId, name, price, quantity}) {
     return (
         <>
             <div className="cart-item">
-                <img src={require(`../../Images/${prodId}.jpg`)} 
-                     width={100} height={100} 
-                     className='cart-image'/>
+                <img className='cart-image'
+                     src={require(`../../Images/${prodId}.jpg`)} />
                 <div className="cart-item-name">
                     <h1>{name}</h1>
                     <h2>{currency(price)}</h2>

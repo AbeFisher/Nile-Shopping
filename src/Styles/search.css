@@ -39,6 +39,15 @@
     box-shadow: 10px 5px 5px gray;
   }
 
+  .results-list {
+    display: flex;
+    flex-flow: row wrap;
+    column-count: 2;
+    margin: 0 auto;
+    padding: 0 50px;
+    width: 95%;
+  }  
+
   .results-pic {
     border: 1.5px solid indigo;
     box-shadow: 10px 5px 5px gray;
@@ -62,20 +71,4 @@
     width: 55%;
 }
 
-.card{
-    background-color: #fff;
-    color: #333;
-    border-radius: 25px;
-    border: 2px solid indigo;
-    box-shadow: 10px 10px 10px rgb(145, 142, 149);
-    padding: 30px;
-    margin: 25px auto;
-    max-width: 60%;
-    min-width: 500px;
-    height: max-content;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
   
